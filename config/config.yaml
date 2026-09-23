@@ -6,9 +6,11 @@ web:
 uplinks:
   chabokan:
     url: https://mirror2.chabokan.net/npm/
+    timeout: 120s
 
   npmjs:
     url: https://registry.npmjs.org/
+    timeout: 120s
 
 packages:
   "@*/*":
@@ -21,3 +23,4 @@ packages:
 
 log:
   - { type: stdout, format: pretty, level: http }
+
