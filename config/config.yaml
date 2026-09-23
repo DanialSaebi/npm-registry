@@ -1,0 +1,23 @@
+storage: /verdaccio/storage
+
+web:
+  title: Local NPM Registry
+
+uplinks:
+  chabokan:
+    url: https://mirror2.chabokan.net/npm/
+
+  npmjs:
+    url: https://registry.npmjs.org/
+
+packages:
+  "@*/*":
+    access: $all
+    proxy: chabokan npmjs
+
+  "*":
+    access: $all
+    proxy: chabokan npmjs
+
+log:
+  - { type: stdout, format: pretty, level: http }
