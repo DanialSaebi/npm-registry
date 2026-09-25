@@ -13,22 +13,25 @@ uplinks:
     timeout: 120s
 
   runflare:
-      url: https://mirror-npm.runflare.com
-      timeout: 120s
+    url: https://mirror-npm.runflare.com
+    timeout: 120s
 
   abrha:
     url: https://mirror.abrha.net/repository/npm/
     timeout: 120s
 
+  liara:
+    url: https://package-mirror.liara.ir/repository/npm/
+    timeout: 120s
+
 packages:
   "@*/*":
     access: $all
-    proxy: chabokan npmjs runflare abrha
+    proxy: chabokan npmjs runflare abrha liara
 
   "*":
     access: $all
-    proxy: chabokan npmjs runflare abrha
+    proxy: chabokan npmjs runflare abrha liara
 
 log:
   - { type: stdout, format: pretty, level: http }
-
