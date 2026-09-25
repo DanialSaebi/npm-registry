@@ -28,14 +28,18 @@ uplinks:
     url: https://archive.ito.gov.ir/npm/
     timeout: 120s
 
+  ito2:
+    url: https://archive.ito.gov.ir/mirror2/npm/
+    timeout: 120s
+
 packages:
   "@*/*":
     access: $all
-    proxy: chabokan npmjs runflare abrha liara ito
+    proxy: chabokan npmjs runflare abrha liara ito ito2
 
   "*":
     access: $all
-    proxy: chabokan npmjs runflare abrha liara ito
+    proxy: chabokan npmjs runflare abrha liara ito ito2
 
 log:
   - { type: stdout, format: pretty, level: http }
