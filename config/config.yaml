@@ -12,14 +12,22 @@ uplinks:
     url: https://registry.npmjs.org/
     timeout: 120s
 
+  runflare:
+      url: https://mirror-npm.runflare.com
+      timeout: 120s
+
+  abrha:
+    url: https://mirror.abrha.net/repository/npm/
+    timeout: 120s
+
 packages:
   "@*/*":
     access: $all
-    proxy: chabokan npmjs
+    proxy: chabokan npmjs runflare abrha
 
   "*":
     access: $all
-    proxy: chabokan npmjs
+    proxy: chabokan npmjs runflare abrha
 
 log:
   - { type: stdout, format: pretty, level: http }
