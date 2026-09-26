@@ -35,11 +35,11 @@ uplinks:
 packages:
   "@*/*":
     access: $all
-    proxy: chabokan npmjs runflare abrha liara ito ito2
+    proxy: liara
 
   "*":
     access: $all
-    proxy: chabokan npmjs runflare abrha liara ito ito2
+    proxy: liara
 
 log:
   - { type: stdout, format: pretty, level: http }
