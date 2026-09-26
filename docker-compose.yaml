@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "6010:4873"
+      - "127.0.0.1:4873:4873"
 
     volumes:
       - ./config:/verdaccio/conf
