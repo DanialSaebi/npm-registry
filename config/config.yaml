@@ -35,11 +35,11 @@ uplinks:
 packages:
   "@*/*":
     access: $all
-    proxy: liara
+    proxy: npmjs
 
   "*":
     access: $all
-    proxy: liara
+    proxy: npmjs
 
 log:
   - { type: stdout, format: pretty, level: http }
